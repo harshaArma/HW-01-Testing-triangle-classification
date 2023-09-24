@@ -1,7 +1,7 @@
-# Triangle
-
 [![harshaArma](https://circleci.com/gh/harshaArma/HW-01-Testing-triangle-classification.svg?style=svg)](https://app.circleci.com/pipelines/github/harshaArma/HW-01-Testing-triangle-classification?branch=main&filter=all)
 
+
+# Triangle
 
 ### Test Report 1
 Test ID   |   Input     |   Expected Results   |   Actual Result   |   Pass or Fail
