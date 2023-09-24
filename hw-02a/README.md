@@ -17,3 +17,18 @@ Test10    |  0,1,1      | InvalidInput         | [Not displayed]   | [Not deduce
 Test11    | 201,201,201 | InvalidInput         | [Not displayed]   | [Not deduced]
 Test12    | 'a',1,1     | InvalidInput         | TypeError         | Error
 
+### Test Report 2 (After Corecting the Logic)
+Test ID   |   Input     |   Expected Results   |   Actual Result   |   Pass or Fail
+----------|-------------|----------------------|-------------------|----------------
+Test01    |  3,4,5      | Right                | Right             | Pass
+Test02    |  5,3,4      | Right                | Right             | Pass
+Test03    |  1,1,1      | Equilateral          | Equilateral       | Pass
+Test04    |  2,3,4      | Scalene              | Scalene           | Pass
+Test05    |  2,2,3      | Isoceles             | Isoceles          | Pass
+Test06    |  2,3,2      | Isoceles             | Isoceles          | Pass
+Test07    |  1,2,3      | NotATriangle         | NotATriangle      | Pass
+Test08    |  5,3,9      | NotATriangle         | NotATriangle      | Pass
+Test09    | -1,1,1      | InvalidInput         | InvalidInput      | Pass
+Test10    |  0,1,1      | InvalidInput         | InvalidInput      | Pass
+Test11    | 201,201,201 | InvalidInput         | InvalidInput      | Pass
+Test12    | 'a',1,1     | InvalidInput         | InvalidInput      | Pass
