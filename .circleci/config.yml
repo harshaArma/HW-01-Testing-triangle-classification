@@ -13,6 +13,7 @@ jobs:
       - run: 
           command: |
             pip install pytest
+            cd hw-02a/
             pytest --junitxml=test-results/junit.xml TestTriangle.py
       - store_test_results:
           path: test-results
