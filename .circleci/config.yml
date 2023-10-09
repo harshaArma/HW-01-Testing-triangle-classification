@@ -3,20 +3,40 @@ version: 2.1
 orbs:
     python: circleci/python@2.0.1
 
-
 jobs:
   build-and-test:
     docker:
       - image: cimg/python:3.10.2
     steps:
       - checkout
-      - run: 
+
+      # For Triangle tests
+      - run:
+          name: "Install Triangle Test Dependencies"
           command: |
             pip install pytest
+      - run:
+          name: "Run Triangle Tests"
+          command: |
             cd hw-02a/
-            pytest --junitxml=test-results/junit.xml TestTriangle.py
+            pytest --junitxml=test-results-triangle/junit.xml TestTriangle.py
+
+      # For GitHub API tests
+      - run:
+          name: "Install GitHub API Test Dependencies"
+          command: |
+            pip install pytest requests
+      - run:
+          name: "Run GitHub API Tests"
+          command: |
+            cd GitHubApi567-hw4a/
+            pytest --junitxml=test-results-github-api/junit.xml test_github_api.py
+
+      # Store test results
       - store_test_results:
-          path: test-results
+          path: test-results-triangle
+      - store_test_results:
+          path: test-results-github-api
 
 workflows:
   testing_triangles:
