@@ -1,7 +1,13 @@
 # github_api.py
 import requests
 
+
 def fetch_repo_commit_data(user_id):
+    if not isinstance(user_id, str):
+        raise TypeError("Expected a string argument")
+    if user_id == '':
+        raise ValueError("Expected a non-empty string argument")
+
     base_url = "https://api.github.com/"
     repos_response = requests.get(base_url +'users/'+ user_id + "/repos")
 
